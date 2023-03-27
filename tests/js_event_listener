@@ -1,0 +1,23 @@
+const { chromium } = require('playwright');
+
+(async () => {
+  const browser = await chromium.launch();
+  const page = await browser.newPage();
+
+  await page.goto('https://example.com');
+  
+  const eventListeners = await page.evaluate(() => {
+    const events = getEventListeners(document);
+    let count = 0;
+    for (const key in events) {
+      if (events.hasOwnProperty(key)) {
+        count += events[key].length;
+      }
+    }
+    return count;
+  });
+
+  console.log(`Number of event listeners: ${eventListeners}`);
+
+  await browser.close();
+})();
