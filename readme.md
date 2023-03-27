@@ -71,4 +71,6 @@ Finally, use Playwright to create powerful and reliable automated tests for web 
 
 - [Project analysis](https://github.com/dp787/mywebclass-simulation/wiki/Project-analysis)
 
+- [Team Documentation](https://github.com/dp787/mywebclass-simulation/wiki/Team-Management-Documentations)
+
 
