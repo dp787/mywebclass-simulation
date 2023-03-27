@@ -3,7 +3,7 @@ version: "3.8"
 services:
     master_branch:
     development_branch:
-      image: kaw393939/mywebclass:development
+      image: dp787/mywebclass-simulation:development
       container_name: development_branch
       pull_policy: always
       restart: always
@@ -20,3 +20,4 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       labels:
       - 'com.centurylinklabs.watchtower.enable: true'
+      -
