@@ -1,0 +1,16 @@
+const { chromium } = require('playwright');
+
+(async () => {
+  const browser = await chromium.launch();
+  const page = await browser.newPage();
+
+  await page.goto('https://example.com');
+
+  const longTasks = await page.evaluate(() => {
+    return performance.getEntriesByType('longtask').length;
+  });
+
+  console.log(`Number of long tasks: ${longTasks}`);
+
+  await browser.close();
+})();
