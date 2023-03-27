@@ -66,4 +66,5 @@ Finally, use Playwright to create powerful and reliable automated tests for web 
 # ADD YOUR PROJECT LINKS BELOW THIS 
 
 [Installation Instructions](https://github.com/dp787/mywebclass-simulation/wiki/Installation-Instructions)
+
 [Productivity Log](https://github.com/dp787/mywebclass-simulation/blob/master/productivity-log)
