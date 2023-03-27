@@ -1,0 +1,16 @@
+const { chromium } = require('playwright');
+
+(async () => {
+  const browser = await chromium.launch();
+  const page = await browser.newPage();
+
+  await page.goto('https://example.com');
+  
+  const frameRate = await page.evaluate(() => {
+    return window.performance.getEntriesByName('first-contentful-paint')[0].loadTime;
+  });
+
+  console.log(`Frame rate: ${frameRate} fps`);
+
+  await browser.close();
+})();
